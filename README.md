@@ -81,16 +81,17 @@ All tests should also pass in non-interactive mode: $ echo "python3 -m unittest 
 ## Files and Directories
 
 | File | Description |
+|---------- | ---------- |
 | console.py | Contains the entry point of the command interpreter |
 | models/base_model.py | Defines all common attributes/methods for other classes |
-| models/engine ||
-| models/user.py||
-| models/engine/file_storage.py||
-| models/state.py ||
-| models/city.py |  |
-| models/amenity.py |  |
-| models/place.py | |
-| models/review.py |  |
+| models/engine | |
+| models/user.py| Contains class user that inherites from BaseModel|
+| models/engine/file_storage.py | serializes instances to a JSON file and deserializes JSON file to instances |
+| models/state.py | Contains class `User` that inherites from  `BaseModel` |
+| models/city.py | Contains class `City` that inherites from  `BaseModel` |
+| models/amenity.py |  Contains class `Amenity` that inherites from  `BaseModel` |
+| models/place.py | Contains class `Place` that inherites from `BaseModel` |
+| models/review.py |  Contains class `Review` that inherites from  `BaseModel` |
 
 
 
