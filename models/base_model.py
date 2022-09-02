@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+import json
 '''
 class BaseModel that defines all common attributes/methods for other classes.
 '''
 
 class BaseModel:
+    cur_date = datetime.now()
     '''
     id: string - assign with an uuid when an instance is created:
         you can use uuid.uuid4() to generate unique id but don’t forget to convert to a string
@@ -14,9 +16,6 @@ class BaseModel:
     updated_at: datetime - assign with the current datetime when an instance is created
                 and it will be updated every time you change your object
     '''
-    id = None
-    created_at = None
-    updated_at = None
     def __init__(self, *args, **kwargs):
         '''
         you will use *args, **kwargs arguments for the constructor of a BaseModel.
@@ -32,19 +31,19 @@ class BaseModel:
         '''
         if kwargs:
             for key,value in kwargs.items():
-                if key != "__class__":
-                    setattr(self, key, value)
                 if key == 'created_at' or key == 'updated_at':
                     value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%f')
+                if key != "__class__":
+                    setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
-            self.created_at = self.updated_at = datetime.now()
-        if not BaseModel.id:
+            self.created_at = self.updated_at = self.cur_date
+        if not self.id:
             self.id = str(uuid.uuid4())
-        if not BaseModel.created_at:
-            self.created_at = self.updated_at = datetime.now()
-        if not BaseModel.updated_at:
-            self.updated_at = datetime.now()
+        if not self.created_at:
+            self.created_at = self.updated_at = self.cur_date
+        if not self.updated_at:
+            self.updated_at = self.cur_date
     '''
     Using Dunder method __str__() for out put.
     '''
@@ -65,10 +64,14 @@ class BaseModel:
     with the current date of the updated obj in it's instance class.
     '''
     def save(self):
-        pass
+        self.updated_at = self.cur_date
 
     '''
     create format of output for the dunder __dict__ of an instance created.
     '''
     def to_dict(self):
-        pass
+        base_dict = dict(self.__dict__)
+        base_dict['__class__'] = str(type(self).__name__)
+        base_dict['created_at'] = self.created_at.isoformat()
+        base_dict['updated_at'] = self.updated_at.isoformat()
+        return base_dict
