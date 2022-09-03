@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 import cmd, sys
 
-class ConsoleShell(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     '''
     Introduction section for the cmd command line.
     '''
     prompt = "(hbnh)"
-    '''
-    Declaring a none type enitiy for the airbnb file.
-    '''
-    airbnb_file = None 
 
     '''
-    Closing the cmd shell
+    implement quit and EOF to exit the program
     '''
-    def close(self):
-        if self.airbnb_file:
-            self.airbnb_file.close()
-            self.airbnb_file = None
+    def do_quit(self):
+        '''
+        Quit command to exit the program
+        '''
+        return True
+    def do_EOF(self):
+        '''
+        End of command line to exit the program.
+        '''
+        return True
 if __name__ == '__main__':
-    ConsoleShell().cmdloop()
+    HBNBCommand().cmdloop()
