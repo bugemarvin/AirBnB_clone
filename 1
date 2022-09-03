@@ -10,12 +10,13 @@ class HBNBCommand(cmd.Cmd):
     '''
     implement quit and EOF to exit the program
     '''
-    def do_quit(self, line):
+    def do_quit(self, args):
         '''
         Quit command to exit the program
         '''
+        self.close()
         return True
-    def do_EOF(self, line):
+    def do_EOF(self, args):
         '''
         End of command line to exit the program.
         '''
