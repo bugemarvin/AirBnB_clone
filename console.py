@@ -2,31 +2,24 @@
 import cmd, sys
 
 class HBNBCommand(cmd.Cmd):
-    '''
-    Introduction section for the cmd command line.
+    '''cmd for AirBnB command line.
     '''
     prompt = "(hbnh)"
 
-    '''
-    implementing an empty line + ENTER that does not execute anything
+    '''Implementing an empty line + ENTER that does not execute anything.
     '''
     def emptyline(self):
-        '''
-        passes nothing.
+        '''passes nothing.
         '''
         pass
 
-    '''
-    implement quit and EOF to exit the program
-    '''
+    '''implement quit and EOF to exit the program'''
     def do_quit(self, line):
-        '''
-        Quit command to exit the program
+        '''Quit command to exit the program
         '''
         return True
     def do_EOF(self, line):
-        '''
-        End of command line to exit the program.
+        '''End of command line to exit the program.
         '''
         return True
 if __name__ == '__main__':
