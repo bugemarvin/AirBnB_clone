@@ -12,6 +12,7 @@ class HBNBCommand(cmd.Cmd):
         '''passes nothing.
         '''
         pass
+        return False
 
     '''implement quit and EOF to exit the program'''
     def do_quit(self, line):
