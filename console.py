@@ -7,6 +7,16 @@ class HBNBCommand(cmd.Cmd):
     '''
     prompt = "$ "
     intro = "(hbnh)"
+
+    '''
+    implementing an empty line + ENTER that does not execute anything
+    '''
+    def emptyline(self):
+        '''
+        passes nothing.
+        '''
+        pass
+
     '''
     implement quit and EOF to exit the program
     '''
