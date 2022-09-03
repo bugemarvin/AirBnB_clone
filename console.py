@@ -5,8 +5,7 @@ class HBNBCommand(cmd.Cmd):
     '''
     Introduction section for the cmd command line.
     '''
-    prompt = "$ "
-    intro = "(hbnh)"
+    prompt = "(hbnh)"
 
     '''
     implementing an empty line + ENTER that does not execute anything
