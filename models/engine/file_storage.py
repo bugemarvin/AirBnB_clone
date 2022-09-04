@@ -7,8 +7,6 @@ import json
 from models.base_model import BaseModel
 
 
-
-
 class FileStorage:
     """
     Class that stores objects in JSON format

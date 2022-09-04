@@ -8,10 +8,10 @@ import json
 import models
 
 
-
 class BaseModel:
     """
-    class BaseModel that defines all common attributes/methods for other classes
+    class BaseModel that defines all common attributes/methods
+    for other classes
 
     Attributes:
         id(str): assign with an uuid when an instance is created:
@@ -56,7 +56,6 @@ class BaseModel:
         returns a string with class name, id and dict object
         """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-
 
     def __repl__(self):
         '''
