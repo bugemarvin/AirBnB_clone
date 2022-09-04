@@ -5,6 +5,7 @@ JSON file and deserializes JSON file to instances
 
 import json
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -52,7 +53,7 @@ class FileStorage:
         else do nothing.
         if the file doesn’t exist, no exception should be raised
         """
-        classes = {'BaseModel': BaseModel}
+        classes = {'BaseModel': BaseModel, 'User': User}
 
         try:
             dic = {}
