@@ -5,6 +5,8 @@ Defines the base Class(BaseModel) for the project
 import uuid
 from datetime import datetime
 import json
+import models
+
 
 
 class BaseModel:
@@ -47,12 +49,14 @@ class BaseModel:
             self.created_at = self.updated_at = self.cur_date
         if not self.updated_at:
             self.updated_at = self.cur_date
+        models.storage.new(self)
 
     def __str__(self):
         """
         returns a string with class name, id and dict object
         """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+
 
     def __repl__(self):
         '''
@@ -69,6 +73,7 @@ class BaseModel:
         updates the  'update_at' attribute to current time
         """
         self.updated_at = self.cur_date
+        models.storage.save()
 
     '''
     create format of output for the dunder __dict__ of an instance created.
