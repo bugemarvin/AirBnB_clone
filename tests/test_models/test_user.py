@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-Unitest for base model
+Unitest for user model
 """
 
-from models.base_model import BaseModel
+from models.user import User
 import unittest
 
 
