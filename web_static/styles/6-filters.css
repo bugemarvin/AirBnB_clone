@@ -24,32 +24,33 @@ button {
         margin-right: 30px;
 }
 
-.locations {
+.locations,
+.amenities {
         height: 100%;
         width: 25%;
         border: solid 1px #DDDDDD;
-        /* max-height: 100%; */
-        /* align-items: center; */
-        /* text-align: revert; */
         justify-content: center;
         display: flex;
         flex-direction: column;
-        /* position: absolute; */
         margin-left: -2px;
 }
 
-.locations:nth-child(2) {
-        /*background: #000;*/
+.amenities {
         margin-left: -133px;
         border-right: none;
 }
 
-.locations h3 {
+.locations, .amenities h3 {
         font-weight: 600;
-        margin-left: 65px;
+        /*margin-left: 65px;*/
 }
 
-.locations h4 {
+.locations, .amenities, h4 {
         font-weight: 400;
         font-size: 14px;
+}
+
+.popover {
+        top; 100;
+        display: none;
 }
