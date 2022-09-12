@@ -24,8 +24,7 @@ button {
         margin-right: 30px;
 }
 
-.locations,
-.amenities {
+.locations {
         height: 100%;
         width: 25%;
         border: solid 1px #DDDDDD;
@@ -39,7 +38,8 @@ button {
         margin-left: -2px;
 }
 
-.amenities {
+.locations:nth-child(2) {
+        /*background: #000;*/
         margin-left: -133px;
         border-right: none;
 }
