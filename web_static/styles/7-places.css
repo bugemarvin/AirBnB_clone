@@ -1,0 +1,26 @@
+.places {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+.places h1 {
+        font-size: 30px;
+        margin-left: 45px;
+        position: absolute;
+        left: 0;
+}
+
+.places article {
+        width: 390px;
+        padding: 20px;
+        margin: 20px;
+        border: solid 1px #FF5A5F;
+        text-align: center;
+        position: relative;
+}
+
+.places article:not(last-child){
+        top: 24px;
+}
