@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+body {
+	margin: 0;
+	padding: 0;
+	color: #484848;
+	font-size: 14px;
+	font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+	max-width: 1000px;
+	margin: 30px auto;
+}
+=======
+* {
+        padding: 0 auto;
+        margin: 0 auto;
+        text-decoration: none;
+        overflow: hidden;
+}
+
+body {
+        color: #484848;
+        font-size: 14px;
+        font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.container {
+        width: 100%;
+        max-width: 1000px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 70px;
+}
+>>>>>>> f42ae735011df69e6850a7ab82c0e0e570d5c6e8

@@ -1,0 +1,16 @@
+header {
+<<<<<<< HEAD
+	background-color: #FF0000;
+	height: 70px;
+	width: 100%;
+}
+=======
+        background-color: #FF0000;
+        height: 70px;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+}
+>>>>>>> f42ae735011df69e6850a7ab82c0e0e570d5c6e8
