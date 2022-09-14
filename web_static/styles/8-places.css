@@ -1,0 +1,102 @@
+.places {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+}
+
+.places h1 {
+        font-size: 30px;
+        margin-left: 45px;
+        width: 100%;
+}
+
+article {
+        border: solid 1px #FF5A5F;
+        width: 390px;
+        padding: 20px;
+        margin: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        border-radius: 4px;
+}
+
+article > h2 {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 34px;
+}
+
+article > .price_by_night {
+        color: #FF5A5F;
+        border: solid 4px #FF5A5F;
+        border-radius: 50%;
+        min-width: 60px;
+        min-height: 60px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        /* top: 0; */
+        right: 0;
+        position: absolute;
+        margin-right: 30px;
+        padding: 4px;
+}
+
+article > .information {
+        height: 80px;
+        border-top: solid 1px #DDDDDD;
+        border-bottom: solid 1px #DDDDDD;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: row;
+}
+
+article > .information .max_guest {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: relative;
+        align-items: center;
+}
+
+article > .information > i {
+        width: 100%;
+}
+
+article > .information .number_rooms {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: relative;
+        align-items: center;
+}
+
+article > .information .number_bathrooms {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: relative;
+        align-items: center;
+}
+
+article > .user{
+        width: 100%;
+        padding: 15px 0 15px 0;
+}
+
+body > footer {
+        position: relative;
+}

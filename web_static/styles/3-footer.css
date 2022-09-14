@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-footer{
-	background-color: white;
-	height: 60px;
-	width: 100%;
-	border-top: 1px solid #CCCCCC;
-        position: fixed;
-	bottom: 0;
-}
-p{
-	text-align: center;
-}
-
-=======
 footer {
         position: absolute;
         bottom: 0;
@@ -23,5 +9,6 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
 }
->>>>>>> f42ae735011df69e6850a7ab82c0e0e570d5c6e8
