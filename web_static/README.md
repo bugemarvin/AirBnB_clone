@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AirBnB clone - Web static
 
 
@@ -26,6 +25,3 @@
 + No use of tags img, embed and iframe
 + No use of Javascript
 + No cross browsers
-=======
-# 0x01. AirBnB clone - Web static
->>>>>>> f42ae735011df69e6850a7ab82c0e0e570d5c6e8
