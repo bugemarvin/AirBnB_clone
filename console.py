@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""The console.py module"""
+"""The console.py module
+"""
+
 
 import cmd
 import sys

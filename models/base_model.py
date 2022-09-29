@@ -2,6 +2,8 @@
 """
 Defines the base Class(BaseModel) for the project
 """
+
+
 import uuid
 from datetime import datetime
 import json
