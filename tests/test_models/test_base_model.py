@@ -11,31 +11,6 @@ import uuid
 class TestBaseModel(unittest.TestCase):
     """Test cases for the base model
     """
-    @classmethod
-    def setUpClass(cls):
-        """setup for the test"""
-        cls.base = BaseModel()
-        cls.base.name = "Kev"
-        cls.base.num = 20
-
-    @classmethod
-    def teardown(cls):
-        """at the end of the test this will tear it down"""
-        del cls.base
-
-    def tearDown(self):
-        """teardown"""
-        try:
-            os.remove("file.json")
-        except Exception:
-            pass
-
-    def test_pep8_BaseModel(self):
-        """Testing for pep8"""
-        style = pep8.StyleGuide(quiet=True)
-        p = style.check_files(['models/base_model.py'])
-        self.assertEqual(p.total_errors, 0, "fix pep8")
-
     def test_checking_for_docstring_BaseModel(self):
         """checking for docstrings"""
         self.assertIsNotNone(BaseModel.__doc__)
@@ -69,10 +44,10 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_dict_BaseModel(self):
         """test if dictionary works"""
-        base_dict = self.base.to_dict()
+        my_base_dict = self.base.to_dict()
         self.assertEqual(self.base.__class__.__name__, 'BaseModel')
-        self.assertIsInstance(base_dict['created_at'], str)
-        self.assertIsInstance(base_dict['updated_at'], str)
+        self.assertIsInstance(my_base_dict['created_at'], str)
+        self.assertIsInstance(my_base_dict['updated_at'], str)
 
 if __name__ == "__main__":
     unittest.main()
