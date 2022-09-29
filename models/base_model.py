@@ -72,6 +72,7 @@ class BaseModel:
         updates the  'update_at' attribute to current time
         """
         self.updated_at = self.cur_date
+        models.storage.new(self)
         models.storage.save()
 
     '''
