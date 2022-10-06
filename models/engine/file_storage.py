@@ -59,9 +59,8 @@ class FileStorage:
         if the file doesn’t exist, no exception should be raised
         """
         classes = {'BaseModel': BaseModel, 'User': User, 'State': State,
-                'City': City, 'Amenity': Amenity, 'Place': Place,
-                'Review': Review}
-
+                   'City': City, 'Amenity': Amenity, 'Place': Place,
+                   'Review': Review}
         try:
             dic = {}
             with open(FileStorage.__file_path, 'r') as f:

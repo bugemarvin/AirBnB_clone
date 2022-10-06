@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""The console.py module"""
+"""The console.py module
+"""
+
 
 import cmd
 import sys
@@ -38,7 +40,7 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def EOF(self, line):
+    def do_EOF(self, line):
         """End of command line to exit the program.
         """
         return True
@@ -56,7 +58,7 @@ class HBNBCommand(cmd.Cmd):
             return False
         return True
 
-    def create(self, line):
+    def do_create(self, line):
         '''Creates a new instance of BaseModel, saves it (to the JSON file)
         and prints the id
 

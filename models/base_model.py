@@ -2,6 +2,8 @@
 """
 Defines the base Class(BaseModel) for the project
 """
+
+
 import uuid
 from datetime import datetime
 import json
@@ -72,6 +74,7 @@ class BaseModel:
         updates the  'update_at' attribute to current time
         """
         self.updated_at = self.cur_date
+        models.storage.new(self)
         models.storage.save()
 
     '''
