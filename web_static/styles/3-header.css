@@ -1,0 +1,10 @@
+header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: solid 1px #CCCCCC;
+        width: 100%;
+        height: 70px;
+        background: no-repeat 20px url(../images/logo_h.png);
+}

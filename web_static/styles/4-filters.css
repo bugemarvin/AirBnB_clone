@@ -1,0 +1,26 @@
+.filters {
+        height: 70px;
+        width: 100%;
+        max-width: 98%;
+        border: solid 1px #DDDDDD;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        margin: 4px;
+        justify-content: space-between;
+        align-content: center;
+        position: relative;
+}
+
+button {
+        width: 20%;
+        height: 48px;
+        font-size: 18px;
+        border: none;
+        background-color: #FF5A5F;
+        color: #FFFFFF;
+        border-radius: 4px;
+        /*position: absolute;*/
+        right: 0;
+        margin-right: 30px;
+}
